@@ -160,6 +160,39 @@ body {
   font-weight: 600;
 }
 
+.input-field {
+  position: relative;
+}
+.error-circle {
+  position: absolute;
+  width: 3rem;
+  top: 11%;
+  // transform: translateY(-50%);
+  right: 3rem;
+  display: none;
+
+  @include respond(phone) {
+    right: 7rem;
+  }
+}
+
+.error-message {
+  color: red;
+  font-weight: 400;
+  margin-left: 3rem;
+  // margin-top: 1rem;
+  font-size: 1.5rem;
+  display: none;
+
+  // @include respond(phone) {
+  //   margin-top: -2rem;
+  // }
+}
+
+.form-error {
+  border: 2px solid red !important;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
