@@ -45,16 +45,25 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  flex: 1; }
+  flex: 1;
+  margin-left: 1rem; }
+  @media (max-width: 600px) {
+    .left {
+      display: block;
+      margin-top: 6rem;
+      flex: none;
+      margin-bottom: 2rem; } }
 
 .heading-container {
-  width: 60%; }
+  width: 73%;
+  padding-left: 4rem; }
   @media (max-width: 600px) {
     .heading-container {
-      width: 80%; } }
+      width: 100%;
+      padding-left: 0; } }
 
 .heading {
-  font-size: 4.3rem;
+  font-size: 5rem;
   line-height: 1;
   color: #fff;
   margin-bottom: 3rem;
@@ -63,26 +72,29 @@ body {
     .heading {
       margin-top: 4rem;
       font-size: 3.1rem;
-      text-align: center; } }
+      text-align: center;
+      line-height: 1.5; } }
 
 .sub-heading {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1;
   color: #fff;
   text-align: left;
   line-height: 2; }
   @media (max-width: 600px) {
     .sub-heading {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       text-align: center;
-      margin-bottom: 3rem; } }
+      line-height: 1.7;
+      margin-bottom: 1rem; } }
 
 .right {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; }
+  align-items: flex-start;
+  margin-top: -1rem; }
   @media (max-width: 600px) {
     .right {
       align-items: center; } }
@@ -90,31 +102,40 @@ body {
 .free-try {
   background-color: #6055a5;
   padding: 2rem;
-  width: 80%;
+  width: 77%;
   margin-bottom: 3rem;
   border-radius: 1rem;
+  font-size: 1.5rem;
   color: #fff;
   text-align: center;
   box-shadow: 0 10px 0px -1px rgba(62, 60, 73, 0.3); }
+  @media (max-width: 600px) {
+    .free-try {
+      width: 90%;
+      font-size: 1.9rem; } }
+
+.attention {
+  font-weight: 700; }
 
 .form-container {
-  padding: 3rem;
+  padding: 4rem;
   background-color: #fff;
   border-radius: 1rem;
-  width: 80%;
+  width: 77%;
   text-align: center;
   box-shadow: 0 10px 0px -1px rgba(62, 60, 73, 0.3); }
   @media (max-width: 600px) {
     .form-container {
       width: 90%;
-      margin-bottom: 3rem; } }
+      margin-bottom: 3rem;
+      padding: 3rem; } }
 
 .input-box {
   width: 100%;
-  height: 5rem;
+  height: 5.5rem;
   border-radius: 0.5rem;
   border: 1px solid #b9b6d3;
-  margin-bottom: 2rem;
+  margin-bottom: 2.4rem;
   padding-left: 3rem; }
 
 .input-box:focus {
@@ -123,15 +144,18 @@ body {
 #button-submit {
   width: 100%;
   background-color: #38cc8c;
-  border-radius: 1rem;
-  height: 5rem;
+  border-radius: 0.5rem;
+  height: 5.5rem;
   border: none;
   color: #fff;
   margin-bottom: 1rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 0px -1px rgba(27, 105, 70, 0.6); }
 
 .disclaimer {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   color: #b9b6d3; }
 
 .terms {
@@ -149,14 +173,23 @@ body {
   display: none; }
   @media (max-width: 600px) {
     .error-circle {
-      right: 7rem; } }
+      right: 2rem;
+      top: 16%; } }
 
 .error-message {
   color: red;
   font-weight: 400;
   margin-left: 3rem;
   font-size: 1.5rem;
-  display: none; }
+  display: none;
+  position: absolute;
+  bottom: 5px;
+  right: 30px; }
+  @media (max-width: 600px) {
+    .error-message {
+      display: none;
+      bottom: 1px;
+      right: 10px; } }
 
 .form-error {
   border: 2px solid red !important; }
@@ -170,3 +203,6 @@ body {
 
 .attribution a {
   color: #3e52a3; }
+
+::placeholder {
+  font-weight: 600; }

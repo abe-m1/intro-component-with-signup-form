@@ -2,7 +2,7 @@ const submitButton = document.querySelector('#button-submit');
 
 const firstNameInput = document.querySelector('#first-name-input');
 const lastNameInput = document.querySelector('#last-name-input');
-const input = document.querySelector('#email-input');
+const emailInput = document.querySelector('#email-input');
 const passwordInput = document.querySelector('#password-input');
 
 function generateErrorIcon(element, type = null) {
@@ -10,7 +10,7 @@ function generateErrorIcon(element, type = null) {
   if (element.classList.contains('form-error') && !type) {
     // with email input, and case where previous error message of invalid email
     // and user empties the field, the message will change back to 'not-empty' message
-    if (element === input) {
+    if (element === emailInput) {
       element.parentElement.firstElementChild.nextElementSibling.textContent =
         'Email cannot be empty';
     }
@@ -20,6 +20,7 @@ function generateErrorIcon(element, type = null) {
     //notifying that email format is not valid, change the text of the error
     element.parentElement.firstElementChild.nextElementSibling.textContent =
       'Looks like this is not an email';
+    emailInput.style.color = 'red';
     return;
   }
 
@@ -53,6 +54,11 @@ function generateErrorIcon(element, type = null) {
 
   //add class so field will get red border
   elem.classList.add('form-error');
+
+  // if is email, change text to red
+  if (element === emailInput) {
+    element.style.color = 'red';
+  }
   return;
 }
 
@@ -74,6 +80,11 @@ function removeErrorMessage(element) {
   if (third) {
     children.removeChild(third);
   }
+
+  // if is email, change text back to black
+  if (element === emailInput) {
+    emailInput.style.color = '#000';
+  }
 }
 
 function validate(e) {
@@ -92,17 +103,23 @@ function validate(e) {
     generateErrorIcon(lastNameInput);
   }
 
-  if (input.value) {
+  if (emailInput.value) {
     // if email value exists check if is a valid email
     const regEx = /^.+@\w+\.\w+$/;
-    if (regEx.test(String(input.value).toLowerCase())) {
-      removeErrorMessage(input);
+    if (regEx.test(String(emailInput.value).toLowerCase())) {
+      removeErrorMessage(emailInput);
     } else {
-      generateErrorIcon(input, 'format-error');
+      generateErrorIcon(emailInput, 'format-error');
     }
   } else {
     // email field is empty
-    generateErrorIcon(input);
+    generateErrorIcon(emailInput);
+  }
+
+  if (passwordInput.value) {
+    removeErrorMessage(passwordInput);
+  } else {
+    generateErrorIcon(passwordInput);
   }
 }
 
