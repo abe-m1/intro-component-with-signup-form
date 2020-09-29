@@ -53,40 +53,37 @@ body {
       margin-top: 6rem;
       flex: none;
       margin-bottom: 2rem; } }
-
-.heading-container {
-  width: 73%;
-  padding-left: 4rem; }
-  @media (max-width: 600px) {
-    .heading-container {
-      width: 100%;
-      padding-left: 0; } }
-
-.heading {
-  font-size: 5rem;
-  line-height: 1;
-  color: #fff;
-  margin-bottom: 3rem;
-  text-align: left; }
-  @media (max-width: 600px) {
-    .heading {
-      margin-top: 4rem;
-      font-size: 3.1rem;
-      text-align: center;
-      line-height: 1.5; } }
-
-.sub-heading {
-  font-size: 1.5rem;
-  line-height: 1;
-  color: #fff;
-  text-align: left;
-  line-height: 2; }
-  @media (max-width: 600px) {
-    .sub-heading {
-      font-size: 1.8rem;
-      text-align: center;
-      line-height: 1.7;
-      margin-bottom: 1rem; } }
+  .left__heading-container {
+    width: 73%;
+    padding-left: 4rem; }
+    @media (max-width: 600px) {
+      .left__heading-container {
+        width: 100%;
+        padding-left: 0; } }
+  .left__heading {
+    font-size: 5rem;
+    line-height: 1;
+    color: #fff;
+    margin-bottom: 3rem;
+    text-align: left; }
+    @media (max-width: 600px) {
+      .left__heading {
+        margin-top: 4rem;
+        font-size: 3.1rem;
+        text-align: center;
+        line-height: 1.5; } }
+  .left__sub-heading {
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #fff;
+    text-align: left;
+    line-height: 2; }
+    @media (max-width: 600px) {
+      .left__sub-heading {
+        font-size: 1.8rem;
+        text-align: center;
+        line-height: 1.7;
+        margin-bottom: 1rem; } }
 
 .right {
   flex: 1;
@@ -113,9 +110,8 @@ body {
     .free-try {
       width: 90%;
       font-size: 1.9rem; } }
-
-.attention {
-  font-weight: 700; }
+  .free-try--attention {
+    font-weight: 700; }
 
 .form-container {
   padding: 4rem;
@@ -141,6 +137,12 @@ body {
 .input-box:focus {
   border: 1px solid gray; }
 
+.input-field {
+  position: relative; }
+
+::placeholder {
+  font-weight: 600; }
+
 #button-submit {
   width: 100%;
   background-color: #38cc8c;
@@ -161,9 +163,6 @@ body {
 .terms {
   color: #ff7a7a;
   font-weight: 600; }
-
-.input-field {
-  position: relative; }
 
 .error-circle {
   position: absolute;
@@ -203,6 +202,3 @@ body {
 
 .attribution a {
   color: #3e52a3; }
-
-::placeholder {
-  font-weight: 600; }

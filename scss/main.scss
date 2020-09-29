@@ -93,48 +93,47 @@ body {
     flex: none;
     margin-bottom: 2rem;
   }
-}
+  &__heading-container {
+    width: 73%;
+    padding-left: 4rem;
 
-.heading-container {
-  width: 73%;
-  padding-left: 4rem;
-
-  @include respond(phone) {
-    width: 100%;
-    padding-left: 0;
+    @include respond(phone) {
+      width: 100%;
+      padding-left: 0;
+    }
   }
-}
 
-.heading {
-  font-size: 5rem;
-  line-height: 1;
-  color: #fff;
-  margin-bottom: 3rem;
-  text-align: left;
+  &__heading {
+    font-size: 5rem;
+    line-height: 1;
+    color: #fff;
+    margin-bottom: 3rem;
+    text-align: left;
 
-  @include respond(phone) {
-    margin-top: 4rem;
-    font-size: 3.1rem;
-    text-align: center;
-    line-height: 1.5;
+    @include respond(phone) {
+      margin-top: 4rem;
+      font-size: 3.1rem;
+      text-align: center;
+      line-height: 1.5;
+    }
   }
-}
 
-.sub-heading {
-  // width: 80%;
-  font-size: 1.5rem;
-  line-height: 1;
-  color: #fff;
-  text-align: left;
-  line-height: 2;
+  &__sub-heading {
+    // width: 80%;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #fff;
+    text-align: left;
+    line-height: 2;
 
-  @include respond(phone) {
-    // margin-top: 4rem;
-    // font-size: 3.1rem;
-    font-size: 1.8rem;
-    text-align: center;
-    line-height: 1.7;
-    margin-bottom: 1rem;
+    @include respond(phone) {
+      // margin-top: 4rem;
+      // font-size: 3.1rem;
+      font-size: 1.8rem;
+      text-align: center;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
   }
 }
 
@@ -167,11 +166,12 @@ body {
     width: 90%;
     font-size: 1.9rem;
   }
+
+  &--attention {
+    font-weight: 700;
+  }
 }
 
-.attention {
-  font-weight: 700;
-}
 .form-container {
   padding: 4rem;
   background-color: #fff;
@@ -199,6 +199,14 @@ body {
   border: 1px solid gray;
 }
 
+.input-field {
+  position: relative;
+}
+
+::placeholder {
+  font-weight: 600;
+}
+
 #button-submit {
   width: 100%;
   background-color: $primaryGreen;
@@ -223,14 +231,10 @@ body {
   font-weight: 600;
 }
 
-.input-field {
-  position: relative;
-}
 .error-circle {
   position: absolute;
   width: 3rem;
   top: 11%;
-  // transform: translateY(-50%);
   right: 3rem;
   display: none;
 
@@ -244,7 +248,6 @@ body {
   color: red;
   font-weight: 400;
   margin-left: 3rem;
-  // margin-top: 1rem;
   font-size: 1.5rem;
   display: none;
   position: absolute;
@@ -256,10 +259,6 @@ body {
     bottom: 1px;
     right: 10px;
   }
-
-  // @include respond(phone) {
-  //   margin-top: -2rem;
-  // }
 }
 
 .form-error {
@@ -276,8 +275,4 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-::placeholder {
-  font-weight: 600;
 }
